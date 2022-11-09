@@ -1,23 +1,25 @@
 <script>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import AppHeaderVue from './components/AppHeader.vue';
-import MainContentVue from './components/MainContent.vue';
-import AppFooterVue from './components/AppFooter.vue';
+import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
+import ComicsBooks from './components/ComicsBooks.vue';
 
 export default {
   components: {
-    AppHeaderVue,
-    AppFooterVue,
-    MainContentVue
+    AppHeader,
+    AppFooter,
+    ComicsBooks
   }
 }
 </script>
 
 <template>
-  <AppHeaderVue />
-  <MainContentVue />
-  <AppFooterVue />
+  <AppHeader />
+  <main>
+    <ComicsBooks />
+  </main>
+  <AppFooter />
 </template>
 
 <style lang="scss">
