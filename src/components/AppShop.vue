@@ -13,7 +13,7 @@ export default {
                     title: " dc merchandise",
                 },
                 {
-                    image: "buy-comics-subscriptions",
+                    image: "buy-comics-subscriptions.png",
                     title: "subscriptions",
                 },
                 {
@@ -21,10 +21,15 @@ export default {
                     title: "comic shop locator",
                 },
                 {
-                    image: "buy-comics-visa.png",
+                    image: "buy-dc-power-visa.svg",
                     title: "dc power visa",
                 }
             ]
+        }
+    },
+    methods: {
+        getImageUrl(url) {
+            return new URL(url, import.meta.url).href;
         }
     }
 }
@@ -32,11 +37,11 @@ export default {
 
 <template>
     <div class="shops">
-        <div class="shops-container">
-            <ul>
+        <div class="shop-container">
+            <ul class="shop-list">
                 <li v-for="(shop, index) in shops" :key="index">
-                    <img src="../assets/img/${shop.image}" alt="">
-                    <p>{{ shop.title }}</p>
+                    <img :src="getImageUrl(`../assets/img/${shop.image}`)" alt="">
+                    <p>{{ shop.title.toUpperCase() }}</p>
                 </li>
             </ul>
         </div>
@@ -44,10 +49,32 @@ export default {
 </template>
 
 <style lang="scss">
-.shops {
-    width: 100%;
-    height: 250px;
+.shop-container {
+    width: 80%;
 
-    background-color: #0282F9;
+    display: flex;
+    justify-content: center;
+}
+
+.shop-list {
+    display: flex;
+
+    li {
+        padding: .5em;
+
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    p {
+        font-size: .8rem;
+        margin: .8em;
+        color: white;
+    }
 }
 </style>
