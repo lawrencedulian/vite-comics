@@ -18,8 +18,8 @@ export default {
 
 <style lang="scss" scoped>
 .thumb {
-    width: calc(100% / 6 - 10px);
-    margin: 5px;
+    width: calc(100% / 6 - 20px);
+    margin: 10px;
 
     img {
         max-height: 180px;
@@ -29,8 +29,10 @@ export default {
     }
 
     h4 {
-        color: white;
+        text-align: start;
+        margin-top: .2em;
         font-size: .8rem;
+        color: white;
     }
 }
 </style>
