@@ -17,9 +17,6 @@ a {
     text-decoration: none;
 }
 
-.active {
-    border-bottom: 8px solid blue;
-}
 
 header {
     width: 100%;
@@ -32,9 +29,7 @@ header {
 
 main {
     width: 100%;
-    height: 20vh;
-
-    background-color: black;
+    background-color: #303030;
 }
 
 .container {
@@ -43,26 +38,28 @@ main {
 
 footer {
     width: 100%;
-    height: 70vh;
+
 }
 
 footer .footer-top {
     width: 100%;
-    height: 20vh;
+    height: 250px;
 
     background-color: #0282F9;
 }
 
 footer .footer-middle {
     width: 100%;
-    height: 400px;
-    background-image: url(../assets/img/buy-comics-digital-comics.png);
+    height: 800px;
 
+    background-image: url(./assets/img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 footer .footer-bottom {
     width: 100%;
-    height: 15vh;
+    height: 150px;
 
-    background-color: darkblue;
+    background-color: #303030;
 }
